@@ -9,8 +9,8 @@ import com.learnspring.entity.DepartmentUpdateRequest;
 
 @Mapper
 public interface DepartmentMapper {
-
+	
+	 // @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 	 @Mapping(target = "departmentId", ignore = true)
-	// @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 	 void departmentRequestToDepartment(DepartmentUpdateRequest departmentUpdateRequest, @MappingTarget Department department);
 }
